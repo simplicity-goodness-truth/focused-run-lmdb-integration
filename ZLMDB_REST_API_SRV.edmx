@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+ <edmx:DataServices m:DataServiceVersion="2.0">
+  <Schema Namespace="ZLMDB_REST_API_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+   <EntityType Name="Product" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="SystemNumber"/>
+     <PropertyRef Name="PPMSNumber"/>
+    </Key>
+    <Property Name="refGuid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ExtSID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="GUID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Namespace" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemType" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="PPMSNumber" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="AddOn" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ElementType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Vendor" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <EntityType Name="Instance" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="SystemNumber"/>
+     <PropertyRef Name="Number"/>
+     <PropertyRef Name="HostName"/>
+    </Key>
+    <Property Name="ExtSID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="refGuid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="GUID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Namespace" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemType" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Number" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="INT1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="HostName" Type="Edm.String" Nullable="false" MaxLength="64" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="HostOtherFQDNNames" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Caption" Type="Edm.String" Nullable="false" MaxLength="256" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="HostGUID" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="HostElementType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="RealHostName" Type="Edm.String" Nullable="false" MaxLength="256" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="RealHostGUID" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="IsLogical" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="FQDN" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ShortDisplayText" Type="Edm.String" Nullable="false" MaxLength="256" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="PortsAndServices" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="OSBits" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="OSVersion" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="OSType" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="OSRelease" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="OSName" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="OSCaption" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="OSElementType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="IPAddress" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="HostOtherIPAddresses" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ElementType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemCaption" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <EntityType Name="SoftwareComponent" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="SystemNumber"/>
+     <PropertyRef Name="Name"/>
+    </Key>
+    <Property Name="refGuid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="GUID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ExtSID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Namespace" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemType" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ServicePack" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Patch" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ElementType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <EntityType Name="System" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="GUID"/>
+     <PropertyRef Name="Namespace"/>
+    </Key>
+    <Property Name="SystemNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="HANARelease" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="GUID" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ExtSID" Type="Edm.String" Nullable="false" MaxLength="256" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SID" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemType" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ElementType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Namespace" Type="Edm.String" Nullable="false" MaxLength="256" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <NavigationProperty Name="ABAPClient" Relationship="ZLMDB_REST_API_SRV.SystemToABAPClient" FromRole="FromRole_SystemToABAPClient" ToRole="ToRole_SystemToABAPClient"/>
+    <NavigationProperty Name="Instance" Relationship="ZLMDB_REST_API_SRV.SystemToInstance" FromRole="FromRole_SystemToInstance" ToRole="ToRole_SystemToInstance"/>
+    <NavigationProperty Name="License" Relationship="ZLMDB_REST_API_SRV.SystemToLicense" FromRole="FromRole_SystemToLicense" ToRole="ToRole_SystemToLicense"/>
+    <NavigationProperty Name="Product" Relationship="ZLMDB_REST_API_SRV.SystemToProduct" FromRole="FromRole_SystemToProduct" ToRole="ToRole_SystemToProduct"/>
+    <NavigationProperty Name="Software" Relationship="ZLMDB_REST_API_SRV.SystemToSoftwareComponent" FromRole="FromRole_SystemToSoftwareComponent" ToRole="ToRole_SystemToSoftwareComponent"/>
+    <NavigationProperty Name="Service" Relationship="ZLMDB_REST_API_SRV.SystemToService" FromRole="FromRole_SystemToService" ToRole="ToRole_SystemToService"/>
+   </EntityType>
+   <EntityType Name="ABAPClient" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="Number"/>
+    </Key>
+    <Property Name="ExtSID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Namespace" Type="Edm.String" Nullable="false" MaxLength="256" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="GUID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemType" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Number" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="refGuid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Location" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="LogicalSystemName" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ElementType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Role" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <EntityType Name="License" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="Scope"/>
+     <PropertyRef Name="SystemNumber"/>
+    </Key>
+    <Property Name="Scope" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="HardwareKey" Type="Edm.String" Nullable="false" MaxLength="11" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemName" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="InstallationNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="LicenseType" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="StartDate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="GUID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="LicenseExpiration" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="refGuid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="UserLimit" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ExtSID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Namespace" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemType" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ElementType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <EntityType Name="Service" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="URL"/>
+     <PropertyRef Name="Name"/>
+     <PropertyRef Name="Type"/>
+     <PropertyRef Name="SystemNumber"/>
+    </Key>
+    <Property Name="URL" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="GUID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="refGuid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Number" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ServiceName" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Protocol" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ServiceType" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ExtSID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Namespace" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemType" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ElementType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <EntityType Name="Systemlist" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="Namespace"/>
+    </Key>
+    <Property Name="SystemNumber" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ExtSID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ElementType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Namespace" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SystemType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="GUID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <Association Name="SystemToInstance" sap:content-version="1">
+    <End Type="ZLMDB_REST_API_SRV.System" Multiplicity="1" Role="FromRole_SystemToInstance"/>
+    <End Type="ZLMDB_REST_API_SRV.Instance" Multiplicity="*" Role="ToRole_SystemToInstance"/>
+    <ReferentialConstraint>
+     <Principal Role="FromRole_SystemToInstance">
+      <PropertyRef Name="GUID"/>
+      <PropertyRef Name="Namespace"/>
+     </Principal>
+     <Dependent Role="ToRole_SystemToInstance">
+      <PropertyRef Name="refGuid"/>
+      <PropertyRef Name="Namespace"/>
+     </Dependent>
+    </ReferentialConstraint>
+   </Association>
+   <Association Name="SystemToLicense" sap:content-version="1">
+    <End Type="ZLMDB_REST_API_SRV.System" Multiplicity="1" Role="FromRole_SystemToLicense"/>
+    <End Type="ZLMDB_REST_API_SRV.License" Multiplicity="*" Role="ToRole_SystemToLicense"/>
+    <ReferentialConstraint>
+     <Principal Role="FromRole_SystemToLicense">
+      <PropertyRef Name="GUID"/>
+      <PropertyRef Name="Namespace"/>
+     </Principal>
+     <Dependent Role="ToRole_SystemToLicense">
+      <PropertyRef Name="refGuid"/>
+      <PropertyRef Name="Namespace"/>
+     </Dependent>
+    </ReferentialConstraint>
+   </Association>
+   <Association Name="SystemToProduct" sap:content-version="1">
+    <End Type="ZLMDB_REST_API_SRV.System" Multiplicity="1" Role="FromRole_SystemToProduct"/>
+    <End Type="ZLMDB_REST_API_SRV.Product" Multiplicity="*" Role="ToRole_SystemToProduct"/>
+    <ReferentialConstraint>
+     <Principal Role="FromRole_SystemToProduct">
+      <PropertyRef Name="GUID"/>
+      <PropertyRef Name="Namespace"/>
+     </Principal>
+     <Dependent Role="ToRole_SystemToProduct">
+      <PropertyRef Name="refGuid"/>
+      <PropertyRef Name="Namespace"/>
+     </Dependent>
+    </ReferentialConstraint>
+   </Association>
+   <Association Name="SystemToSoftwareComponent" sap:content-version="1">
+    <End Type="ZLMDB_REST_API_SRV.System" Multiplicity="1" Role="FromRole_SystemToSoftwareComponent"/>
+    <End Type="ZLMDB_REST_API_SRV.SoftwareComponent" Multiplicity="*" Role="ToRole_SystemToSoftwareComponent"/>
+    <ReferentialConstraint>
+     <Principal Role="FromRole_SystemToSoftwareComponent">
+      <PropertyRef Name="GUID"/>
+      <PropertyRef Name="Namespace"/>
+     </Principal>
+     <Dependent Role="ToRole_SystemToSoftwareComponent">
+      <PropertyRef Name="refGuid"/>
+      <PropertyRef Name="Namespace"/>
+     </Dependent>
+    </ReferentialConstraint>
+   </Association>
+   <Association Name="SystemToService" sap:content-version="1">
+    <End Type="ZLMDB_REST_API_SRV.System" Multiplicity="1" Role="FromRole_SystemToService"/>
+    <End Type="ZLMDB_REST_API_SRV.Service" Multiplicity="*" Role="ToRole_SystemToService"/>
+    <ReferentialConstraint>
+     <Principal Role="FromRole_SystemToService">
+      <PropertyRef Name="GUID"/>
+      <PropertyRef Name="Namespace"/>
+     </Principal>
+     <Dependent Role="ToRole_SystemToService">
+      <PropertyRef Name="refGuid"/>
+      <PropertyRef Name="Namespace"/>
+     </Dependent>
+    </ReferentialConstraint>
+   </Association>
+   <Association Name="SystemToABAPClient" sap:content-version="1">
+    <End Type="ZLMDB_REST_API_SRV.System" Multiplicity="1" Role="FromRole_SystemToABAPClient"/>
+    <End Type="ZLMDB_REST_API_SRV.ABAPClient" Multiplicity="*" Role="ToRole_SystemToABAPClient"/>
+    <ReferentialConstraint>
+     <Principal Role="FromRole_SystemToABAPClient">
+      <PropertyRef Name="GUID"/>
+      <PropertyRef Name="Namespace"/>
+     </Principal>
+     <Dependent Role="ToRole_SystemToABAPClient">
+      <PropertyRef Name="refGuid"/>
+      <PropertyRef Name="Namespace"/>
+     </Dependent>
+    </ReferentialConstraint>
+   </Association>
+   <EntityContainer Name="ZLMDB_REST_API_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+    <EntitySet Name="ProductSet" EntityType="ZLMDB_REST_API_SRV.Product" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="InstanceSet" EntityType="ZLMDB_REST_API_SRV.Instance" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="SoftwareSet" EntityType="ZLMDB_REST_API_SRV.SoftwareComponent" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="SystemSet" EntityType="ZLMDB_REST_API_SRV.System" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="ABAPClientSet" EntityType="ZLMDB_REST_API_SRV.ABAPClient" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="LicenseSet" EntityType="ZLMDB_REST_API_SRV.License" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="ServiceSet" EntityType="ZLMDB_REST_API_SRV.Service" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="SystemlistSet" EntityType="ZLMDB_REST_API_SRV.Systemlist" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <AssociationSet Name="SystemToProductSet" Association="ZLMDB_REST_API_SRV.SystemToProduct" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+     <End EntitySet="SystemSet" Role="FromRole_SystemToProduct"/>
+     <End EntitySet="ProductSet" Role="ToRole_SystemToProduct"/>
+    </AssociationSet>
+    <AssociationSet Name="SystemToABAPClientSet" Association="ZLMDB_REST_API_SRV.SystemToABAPClient" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+     <End EntitySet="SystemSet" Role="FromRole_SystemToABAPClient"/>
+     <End EntitySet="ABAPClientSet" Role="ToRole_SystemToABAPClient"/>
+    </AssociationSet>
+    <AssociationSet Name="SystemToInstanceSet" Association="ZLMDB_REST_API_SRV.SystemToInstance" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+     <End EntitySet="SystemSet" Role="FromRole_SystemToInstance"/>
+     <End EntitySet="InstanceSet" Role="ToRole_SystemToInstance"/>
+    </AssociationSet>
+    <AssociationSet Name="SystemToLicenseSet" Association="ZLMDB_REST_API_SRV.SystemToLicense" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+     <End EntitySet="SystemSet" Role="FromRole_SystemToLicense"/>
+     <End EntitySet="LicenseSet" Role="ToRole_SystemToLicense"/>
+    </AssociationSet>
+    <AssociationSet Name="SystemToSoftwareComponentSet" Association="ZLMDB_REST_API_SRV.SystemToSoftwareComponent" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+     <End EntitySet="SystemSet" Role="FromRole_SystemToSoftwareComponent"/>
+     <End EntitySet="SoftwareSet" Role="ToRole_SystemToSoftwareComponent"/>
+    </AssociationSet>
+    <AssociationSet Name="SystemToServiceSet" Association="ZLMDB_REST_API_SRV.SystemToService" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+     <End EntitySet="SystemSet" Role="FromRole_SystemToService"/>
+     <End EntitySet="ServiceSet" Role="ToRole_SystemToService"/>
+    </AssociationSet>
+   </EntityContainer>
+   <atom:link rel="self" href="https://FRUNWD.DEV.HEC.TOOLS.SAP:443/sap/opu/odata/sap/ZLMDB_REST_API_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+   <atom:link rel="latest-version" href="https://FRUNWD.DEV.HEC.TOOLS.SAP:443/sap/opu/odata/sap/ZLMDB_REST_API_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+  </Schema>
+ </edmx:DataServices>
+</edmx:Edmx>

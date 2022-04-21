@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<edmx:Edmx xmlns:sap="http://www.sap.com/Protocols/SAPData" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+
+
+-<edmx:DataServices m:DataServiceVersion="2.0">
+
+
+-<Schema xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" sap:schema-version="1" Namespace="ZLMDB_CHANGE_LOG_REST_API_SRV">
+
+
+-<EntityType sap:content-version="1" Name="ChangeLogRecord">
+
+
+-<Key>
+
+<PropertyRef Name="Timestamp"/>
+
+<PropertyRef Name="ClassName"/>
+
+<PropertyRef Name="GUID"/>
+
+</Key>
+
+<Property Name="EventType" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" MaxLength="1" Nullable="false" Type="Edm.String"/>
+
+<Property Name="Timestamp" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" Nullable="false" Type="Edm.DateTime" sap:label="Time Stamp" Precision="0"/>
+
+<Property Name="ElementType" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
+
+<Property Name="TechSystemNumber" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" MaxLength="18" Nullable="false" Type="Edm.String"/>
+
+<Property Name="TechSystemExtSID" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" MaxLength="256" Nullable="false" Type="Edm.String"/>
+
+<Property Name="TechSystemSID" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" MaxLength="40" Nullable="false" Type="Edm.String"/>
+
+<Property Name="Name" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
+
+<Property Name="Caption" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
+
+<Property Name="ClassName" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
+
+<Property Name="OldValue" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
+
+<Property Name="NewValue" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
+
+<Property Name="UserName" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
+
+<Property Name="GUID" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" MaxLength="32" Nullable="false" Type="Edm.String"/>
+
+<Property Name="DisplayTechSystem" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" Nullable="false" Type="Edm.Boolean" sap:label="Indicator"/>
+
+<Property Name="Namespace" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" Nullable="false" Type="Edm.String"/>
+
+<Property Name="HoursToDisplay" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:unicode="false" Nullable="false" Type="Edm.Byte" sap:label="INT1"/>
+
+</EntityType>
+
+
+-<EntityContainer Name="ZLMDB_CHANGE_LOG_REST_API_SRV_Entities" sap:supported-formats="atom json xlsx" m:IsDefaultEntityContainer="true">
+
+<EntitySet sap:content-version="1" Name="ChangeLogRecordSet" sap:updatable="false" sap:creatable="false" sap:pageable="false" sap:deletable="false" EntityType="ZLMDB_CHANGE_LOG_REST_API_SRV.ChangeLogRecord"/>
+
+</EntityContainer>
+
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="https://FRUNWD.DEV.HEC.TOOLS.SAP:443/sap/opu/odata/sap/ZLMDB_CHANGE_LOG_REST_API_SRV/$metadata" rel="self"/>
+
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="https://FRUNWD.DEV.HEC.TOOLS.SAP:443/sap/opu/odata/sap/ZLMDB_CHANGE_LOG_REST_API_SRV/$metadata" rel="latest-version"/>
+
+</Schema>
+
+</edmx:DataServices>
+
+</edmx:Edmx>
